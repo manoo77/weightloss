@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald");
-body {background: #f2f7ff;color: #222;padding-top: 15px;}
+body {background: #f2f7ff;color: #222;padding-top: 0px;}
 a {color: #1a64b0;text-decoration: underline;}
 a:hover, a:focus {color: #2591ff;text-decoration: none;}
 a:focus {outline: none;}
