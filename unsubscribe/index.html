@@ -65,20 +65,8 @@ scJsHost+
 	line-height: 26px;
 }		
 	
+
 	
-	
-	
-	
-	
-	
-			.content_Fright {
-	margin: 0px;
-	float: left;
-	width: 235px;
-	padding-left: 5px;
-	background-image: url(https://weightloss.peerooz.com/wp-content/uploads/2020/04/form_bg.png);
-	background-repeat: no-repeat;
-}
 	
 	.form_Ftop {
 	margin: 0px;
@@ -296,7 +284,18 @@ scJsHost+
 
 
 <script type="text/javascript">
-     
+    function validateName() {
+            var name = document.getElementById('name').value;
+            if(name.length == 0) {
+              alert("Name can't be blank") ;
+              return false;
+            }
+            if (!name.match(/^[a-zA-Z]{3,}(?: [a-zA-Z]+){0,2}$/)) {
+              alert("Please enter your correct name") ;//Validation Message
+              return false;
+            }
+            return true;
+          }
  
          function validateEmail () {
           var email = document.getElementById('email').value;
@@ -313,7 +312,7 @@ scJsHost+
 
         }
         function validateForm() {
-          if (!validateEmail()) {
+          if (!validateName() || !validateEmail()) {
 
             alert("Form not submitted");//Validation Message
             return false;
@@ -322,15 +321,17 @@ scJsHost+
             submitted=true;
             return true;
           }
-        }
+        }   
          </script>
-				  
+				 <input name="entry.1176424148" type="text" class="field_Fname" onfocus="if(this.value == '*Enter Your First Name'){ 								this.value = ''; this.style.color= '#1a1a1a'; }" onblur="if(this.value == ''){ this.value = '*Enter Your First Name'; this.style.color= '#818181';}" value="*Enter Your First Name">
 				 
 				 <input name="entry.887873799" type="text" class="field_Femail" onfocus="if(this.value == '*Enter Your Email Address'){ this.value = ''; this.style.color= '#1a1a1a'; }" onblur="if(this.value == ''){ this.value = '*Enter Your Email Address'; this.style.color= '#818181'; }" value="*Enter Your Email Address"><br>
 				 
-				 <input name="Submit" type="submit" class="Fsubmit" value="Unsubscribe"></form>
-				 
-				 
+				 <input name="Submit" type="submit" class="Fsubmit" value="AA-Submit"></form>
+	
+	
+	
+	
 				 
 				 
 				 
