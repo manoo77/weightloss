@@ -1,0 +1,90 @@
+<html>
+<body>
+
+width="640" height="383" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+
+
+</body></html>
+
+==========
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScWWK7M4XPXcZmTHGAoxzPR6zIKCQtk2iH40SQzQHLUSVw1UA/viewform?embedded=true" width="640" height="383" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+=============
+
+<div class="form-box">
+<div class="form-title">
+<h1>
+Exercise Without Effort<br>E-book Valued $9.99 <br>"GET IT FREE"</h1><br>
+ 
+<h3>
+Simply Enter Your First Name &amp; Primary Email Address To The Form Below &amp; Click Submit:</h3>
+</div>
+<div class="form-inside">
+<script type="text/javascript">var submitted=false;</script>
+<iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted) {window.location='thank-you.html';}" style="display: none;"></iframe>
+
+
+<!-- Update the Google forms URL in action-->
+    <br>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLScWWK7M4XPXcZmTHGAoxzPR6zIKCQtk2iH40SQzQHLUSVw1UA/formResponse" method="post" onsubmit="submitted=true;" target="hidden_iframe">
+
+
+<!-- This is the code for Name and Email valdiation, that people type good  email and name, Take this line out when uploading -->
+<script type="text/javascript">
+    function validateName() {
+            var name = document.getElementById('name').value;
+            if(name.length == 0) {
+              alert("Name can't be blank") ;
+              return false;
+            }
+            if (!name.match(/^[a-zA-Z]{3,}(?: [a-zA-Z]+){0,2}$/)) {
+              alert("Please enter your correct name") ;//Validation Message
+              return false;
+            }
+            return true;
+          }
+ 
+         function validateEmail () {
+          var email = document.getElementById('email').value;
+          if(email.length == 0) {
+            alert("Email can't be blank") ;//Validation Message
+            return false;
+          }
+          if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+            alert("Please enter a correct email address") ;//Validation Message
+            return false;
+
+          }
+          return true;
+
+        }
+        function validateForm() {
+          if (!validateName() || !validateEmail()) {
+
+            alert("Form not submitted");//Validation Message
+            return false;
+          }
+          else {
+            submitted=true;
+            return true;
+          }
+        }
+         </script>
+
+<!-- End Contact Section -->
+
+<br>
+ 
+<label></label>
+        <input class="input-box" id="name" name="entry.1008071450" placeholder="Your Name" required="" type="text">  <br><br>
+  
+<label></label>
+        <input class="input-box" id="email" name="entry.2013074346" placeholder="Your Email" required="" type="text"> 
+        <button class="buttongr" type="submit">SUBMIT</button>
+</form>
+
+<!-- End Contact Section -->
+</div>
+				 </div>
