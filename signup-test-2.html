@@ -24,7 +24,7 @@
     
     <!-- Update the Google forms URL in action-->
     <form action="https://docs.google.com/forms/d/e/1FAIpQLScAnIww-AmQVxpik7wVPw2UlYEN8oYFbUi0ZOXOTe8hFF7-Nw/formResponse"
-      target="_self" method="post"   ">
+      target="_self" method="post"  id="bootstrapForm">
 
       
 	  
@@ -54,76 +54,16 @@
     </form>
 </div>
 </div>
-    <script type="text/javascript">
-    function validateName() {
-            var name = document.getElementById('name').value;
-            if(name.length == 0) {
-              alert("Name can't be blank") ;
-              return false;
-
-            }
-            if (!name.match(/^[a-zA-Z]{3,}(?: [a-zA-Z]+){0,2}$/)) {
-              alert("Please enter your correct name") ;//Validation Message
-              return false;
-            }
-            return true;
-          }
-
-          function validatePhone() {
-            var phone = document.getElementById('phone').value;
-            if(phone.length == 0) {
-              alert("Phone number can't be blank") ;//Validation Message
-              return false;
-            }
-
-            if(!phone.match(/^[0]?[789]\d{9}$/)) {
-             alert("Please enter a correct phone number") ;//Validation Message
-             return false;
-           }
-
-           return true;
-
-         }
-
-         function validateEmail () {
-
-          var email = document.getElementById('email').value;
-          if(email.length == 0) {
-            alert("Email can't be blank") ;//Validation Message
-            return false;
-
-          }
-
-          if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
-            alert("Please enter a correct email address") ;//Validation Message
-            return false;
-
-          }
-
-          return true;
-
-        }
-
-
-        function validateForm() {
-          if (!validateName() || !validatePhone() || !validateEmail()) {
-
-            alert("Form not submitted");//Validation Message
-            return false;
-          }
-          else {
-            submitted=true;
-            return true;
-          }
-        }
-        </script>
+   
 		
 	<script>
 // This script requires jQuery and jquery-form plugin
 // You can use these ones from Cloudflare CDN:
-// <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-// <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
-//
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+
+<script>
 $('#bootstrapForm').submit(function (event) {
     event.preventDefault()
     var extraData = {}
